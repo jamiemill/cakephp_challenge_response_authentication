@@ -16,7 +16,6 @@
 			}
 			var nonce = $passwordField.attr('data-nonce');
 			var salt = $passwordField.attr('data-salt');
-			
 	
 			$passwordField.closest('form').submit(function(){
 				hashPasswordField();
@@ -33,7 +32,7 @@
 					alert('SHA1 script is not loaded.');
 					return false;
 				}
-				return hex_sha1(nonce+(hex_sha1(salt+plainPassword)));
+				return hex_sha1(nonce+hex_sha1(salt+plainPassword));
 			}
 			
 		});

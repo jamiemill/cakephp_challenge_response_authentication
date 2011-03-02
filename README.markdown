@@ -37,6 +37,7 @@ Disadvantages
 - The password must still be sent in the clear for registration and password reset requests so the server can update its records.
 - Your application's security salt will be revealed to all visitors who see the login form, as this is required for the hashing to be done client-side.
 - Automatic password hashing in the controller is disabled, so to save new passwords you must manually hash it first.
+- Be careful about ajax requests or missing asset requests triggering new nonces to be generated in the background
 
 Usage
 -----
